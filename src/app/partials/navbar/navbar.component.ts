@@ -10,9 +10,12 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
    public currentuser:null;
+  
   constructor(private account:AccountService,private token:TokenService,private router:Router) { }
 
   ngOnInit(): void {
+
+    
 
     this.account.authStatus.subscribe(res=>{
       

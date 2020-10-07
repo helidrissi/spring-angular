@@ -1,4 +1,4 @@
-import { environment } from './../../environments/environment.prod';
+
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -13,6 +13,6 @@ export class AddressService {
 
   getall(){
 
-    return this.http.get("http://localhost:8080/addresses")
+    return this.http.get("http://localhost:9000/addresses")
   }
 }
