@@ -14,10 +14,10 @@ export class AuthService {
 
   }
 
-  login(data:{username:string,password:string})
+  login(email:string,password:string)
   {
    
-    return this.http.post("http://localhost:9000/users/login",data)
+    return this.http.post("http://localhost:9000/users/login",{email,password})
 
   }
 }

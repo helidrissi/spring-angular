@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
     
     email:new FormControl('',[Validators.required,Validators.email]),
     password:new FormControl('',[Validators.required,Validators.minLength(6)]),
-   // envir:new FormControl(''),
+    envir:new FormControl(''),
     
 
 
@@ -33,9 +33,9 @@ export class LoginComponent implements OnInit {
   }
   login(){
 
-    this.authservice.login(this.formLogin.get('email').value,this.formLogin.get('password').value).subscribe(res => console.log(res))
+    this.authservice.login(this.formLogin.get('email').value,this.formLogin.get('password').value).subscribe(res => this.authHandle(res))
     
-    //localStorage.setItem('token', this.formLogin.get('envir').value);
+    localStorage.setItem('token', this.formLogin.get('envir').value);
   }
 
   authHandle(res){
