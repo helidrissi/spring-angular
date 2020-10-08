@@ -28,8 +28,7 @@
               "./node_modules/ngx-toastr/toastr.css",
               "./node_modules/bootswatch/dist/journal/bootstrap.min.css"
             ],
-            "scripts": [ 
-             ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -122,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "spring-angular"
+    }
+  },
+  "defaultProject": "spring-angular",
+  "cli": {
+    "analytics": "89d35281-eef1-4f33-8f2f-1fcd41c9fbb1"
+  }
 }

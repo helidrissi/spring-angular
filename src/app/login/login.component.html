@@ -17,12 +17,14 @@
           <input  formControlName="password"  type="password" class="form-control" id="password">
         </div>
         <div class="form-group">
-          <label for="exampleSelect1">Environement</label>
-          <select class="form-control" id="envir">
-            <option value="prod">Production</option>
-            <option value="preprod">Jeu d'essai</option>
-            <option value="test">Archive</option>
-          </select>
+          <label for="envir">Environement</label>
+          <select formControlName="envir" id="envir">
+            
+           
+            <option *ngFor="let prf of env"  [ngValue]="prf.name">
+             {{ prf.libelle }}
+            </option>
+          </select> 
         </div>
         <div class="alert alert-danger"  *ngIf="formLogin.get('password').invalid && (formLogin.get('password').touched || formLogin.get('password').dirty  )">
             <diV *ngIf="formLogin.get('password').getError('required')">This field Is required</diV>

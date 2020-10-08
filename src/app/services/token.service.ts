@@ -24,9 +24,14 @@ export class TokenService {
     return localStorage.getItem('id');
   }
 
+  getenv() {
+    return localStorage.getItem('envir');
+  }
+
   remove() {
     localStorage.removeItem('token');
     localStorage.removeItem('id');
+    localStorage.removeItem('envir');
   }
 
   decode(payload) {

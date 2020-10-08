@@ -1,6 +1,6 @@
 import { AddressService } from './../services/address.service';
 import { Component, OnInit } from '@angular/core';
-import {Address} from '../model/address'
+
 
 @Component({
   selector: 'app-list-address',
@@ -11,7 +11,7 @@ export class ListAddressComponent implements OnInit {
 
   constructor(private addressservice:AddressService) { }
 
-  addresses: Address[]=[];
+
 
   ngOnInit(): void {
 
@@ -22,6 +22,6 @@ export class ListAddressComponent implements OnInit {
   getAllAddressses()
   {
 
-    this.addressservice.getall().subscribe((res:Address[])=> this.addresses=res)
+   
   }
 }

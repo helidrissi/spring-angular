@@ -1,3 +1,4 @@
+import { EnvService } from './../../env.service';
 import { TokenService } from './../../services/token.service';
 import { AccountService } from './../../services/account.service';
 import { Component, OnInit } from '@angular/core';
@@ -10,12 +11,13 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
    public currentuser:null;
-  
-  constructor(private account:AccountService,private token:TokenService,private router:Router) { }
+    environement:string;
+    env:any;
+  constructor(private account:AccountService,private token:TokenService,private router:Router,private envservice:EnvService) { }
 
   ngOnInit(): void {
 
-    
+    this.environement=this.token.getenv();
 
     this.account.authStatus.subscribe(res=>{
       
@@ -25,6 +27,7 @@ export class NavbarComponent implements OnInit {
       
   }
 
+  
   logout(){
 
     this.token.remove();
