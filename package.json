@@ -23,7 +23,7 @@
     "bootswatch": "^4.2.1",
     "jquery": "^3.5.1",
     "ngx-toastr": "^13.0.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
